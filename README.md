@@ -68,3 +68,5 @@ Make sure `dummy_result.json` or `combined_results.json` is present in the scrip
 
 Feel free to fork this repo and contribute with improvements or new visualizations!
 
+## License
+This project is licensed under the MIT License.
