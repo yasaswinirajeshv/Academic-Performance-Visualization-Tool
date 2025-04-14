@@ -50,6 +50,16 @@ BEGIN { first = 1 }
     }
     subject = substr(subject, 2)
 
+    # Edge case: subject might be "PROGRAMMING IN C" or "PROGRAMMING IN C LAB"
+    if (subject == "PROGRAMMING IN" && $i == "C") {
+        subject = subject " C"
+        i++
+        if ($i == "LAB") {
+            subject = subject " LAB"
+            i++
+        }
+    }
+
     n_grades = 0
     for (j = i; j <= NF; j++) {
         grades[n_grades++] = $j
@@ -75,6 +85,7 @@ BEGIN { first = 1 }
     delete grades
 }
 ' results.txt
+
 
 echo ""
 echo "  ]"
