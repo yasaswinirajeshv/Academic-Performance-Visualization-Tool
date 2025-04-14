@@ -1,5 +1,5 @@
 ﻿# Academic Performance Visualization Tool
-
+ 
 This project is a Python and Bash-based visualization tool for analyzing and visualizing student academic performance data extracted from PDF marksheets.
 
 ## Project Structure
