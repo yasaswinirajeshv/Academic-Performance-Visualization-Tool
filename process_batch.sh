@@ -33,3 +33,7 @@ if command -v jq &> /dev/null; then
 fi
 
 echo "All student data saved to $output_file"
+
+echo "Visualizing results"
+
+python3 main.py

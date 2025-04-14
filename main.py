@@ -3,8 +3,12 @@ import pandas as pd
 import plotly.express as px
 
 # ---------- Load JSON ----------
-with open('dummy_result.json') as f:
-    raw_data = json.load(f)
+with open("combined_results.json", "r") as f:
+    content = f.read().strip()
+    if not content:
+        print("Error: combined_results.json is empty!")
+        exit(1)
+    raw_data = json.loads(content)
 
 # ---------- Grade to Numeric Mapping ----------
 grade_to_num = {
